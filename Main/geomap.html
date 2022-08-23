@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>PiGo</title>
+  <link href="style.min.css" rel="stylesheet"/>
+  <style>
+  :root {
+    --primary-color:#367BF0;
+    --body-color:#f9f9f9;
+    --text-color:#636363;
+    --text-color-dark:#242738;
+    --white-color:#ffffff;
+    --light-color:#f8f9fa;
+    --font-family:Times New Roman;
+  }
+
+  body.dark-theme {
+    --body-color:black;
+    --text-color:#e1e1e1;
+    --text-color-dark:white;
+    --white-color:#121212;
+    --light-color:#1A1A1A;
+  }
+  
+  h1 {
+		text-align: center;
+		color: #00ffff;
+		text-indent: 50px;
+		text-align: center;
+		letter-spacing: 3px;
+		align-items: center;
+		animation: anime0 10s infinite;
+		animation: anime1 5s infinite;
+		margin: auto;
+		width: 50%;
+		padding: 10px;
+	}
+	@keyframes anime0{
+		from { color: #00ffff;}
+		to {color: #ff9966;}
+	}
+	@keyframes anime1{
+		from { color: #ff9966;;}
+		to {color: #6666ff;}
+	}
+	
+	embed-container {
+		position: relative; padding-bottom: 75%; height: 0; max-width: 100%;
+	} 
+	.embed-container iframe, .embed-container object, .embed-container iframe{
+		position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+	} 
+	small{
+		position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;
+	}
+  </style>
+  <link rel="stylesheet" href="plugins/themify-icons.css">
+  <link rel="icon" href="LogoMain.png">
+</head>
+<body>
+	<style>
+	body{
+        background-image: url('images/mp.png');
+    } 
+	</style>
+	<center>
+	<h1>PiGO</h1>
+	</center>
+	<div id="embed-container">
+	<center>
+	<iframe style="border:2px solid black;" width="1000" id="mapdata" height="900" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="GIS MAPPER" src="https://gistracker.maps.arcgis.com/apps/Embed/index.html?webmap=37211b63a11641ce80a301b2e628b1ff&extent=75.3587,11.7741,75.7178,11.9592&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&details=true&legendlayers=true&active_panel=details&disable_scroll=true&theme=dark&marker=75.623;11.916;;To%20be%20center%20of%20excellence%20for%20technical%20education%20by%20moulding%20young%20technical%20aspirants%20having%20a%20holistic%20approach%20and%20strong%20commitment%20towards%20self%20and%20social%20responsibilities.;;St.%20Thomas%20College%20of%20Engineering%20and%20Technology%2C%20Kannur" style="color:#0000FF;text-align:left" target="_blank">
+	</iframe>
+	</center>
+	</div>
+	<script language="javascript">
+    var locdata=sessionStorage.getItem("LocData");
+	</script>
+	</body>
+</html>  

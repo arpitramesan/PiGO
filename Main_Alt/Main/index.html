@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  
+  <title>Arc Map</title>
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link href="style.min.css" rel="stylesheet"/>
+  <style>
+  :root {
+    --primary-color:#367BF0;
+    --body-color:#f9f9f9;
+    --text-color:#636363;
+    --text-color-dark:#242738;
+    --white-color:#ffffff;
+    --light-color:#f8f9fa;
+    --font-family:Noto Sans;
+  }
+
+  body.dark-theme {
+    --body-color:black;
+    --text-color:#e1e1e1;
+    --text-color-dark:white;
+    --white-color:#121212;
+    --light-color:#1A1A1A;
+  }
+  </style>
+
+  
+  <link rel="stylesheet" href="plugins/themify-icons.css">
+
+ <!-- <script>
+    const $ = document.querySelector.bind(document)
+    const $$ = document.querySelectorAll.bind(document)
+  </script> -->
+</head>
+
+  <body>
+<div class="container" id="banner">
+  <h1></h1>
+  <p></p>
+  <div id="searchbar">
+    <input placeholder="Enter Destination Location !" autofocus id="src">
+    <i class="ti-search"></i>
+    <ul id="search-result"></ul>
+  </div>
+</div>
+<div id="btn"><center>
+    <input type="button" id="bt0" value="Current Location" autofocus onclick="FindLoc()">
+    <input type="button" id="bt1" value="Search" onclick="SearchIn();"></center>
+</div>
+<script>
+    var src, current;
+    src=document.getElemenById("src").value;
+    cur
+    function SearchIn()
+    {
+    	window.open('https://google.com/search?q='+src);
+    	window.open('file:/#/storage/emulated/0/Prjct/Main/Main.html');
+    }
+</script>
+<style>
+    body{
+        background-image: url('img/mp.png');
+    } 
+   #bt0 {
+       border: none;
+      color: white;
+      padding: 13px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      align-items:center;
+      background-color: #000066;
+      border-radius: 25px;
+      position: relative;
+   } 
+   
+  #bt1 {
+      border-radius:25px;
+      align-items:center;
+      border:none;
+      padding:13px 30px;
+      text-align:center;
+      display:inline-block;
+      margin:4x 2px;
+      cursor: pointer;
+      background-color: 
+  }
+  
+  #banner {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 80px 0;
+    position: relative;
+    align-items: center;
+  }
+
+  #banner h1 {
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  }
+
+  #banner p {
+    color: white;
+    font-size: 20px;
+    opacity: .8;
+  }
+
+  #searchbar {
+    --input-height: 50px;
+    position: relative;
+    width: 90%;
+    vertical-align:middle;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  #searchbar input {
+    width: 100%;
+    height: var(--input-height);
+    border-radius: calc(var(--input-height) / 2);
+    border: 0;
+    padding: 0 50px 0 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #495057;
+    outline: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  }
+
+  #searchbar input.expanded {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  #searchbar i {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    font-size: 14px;
+    color: black;
+  }
+
+  #search-result {
+    position: absolute;
+    max-height: 220px;
+    width: 100%;
+    border-radius: 0 0 calc(var(--input-height) / 2) calc(var(--input-height) / 2);
+    z-index: 1;
+    overflow: auto;
+    text-align: left;
+    line-height: 2em;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  #search-result::-webkit-scrollbar { display: none; }
+
+  #search-result li {
+    border-bottom: 1px solid #e8e8e8;
+    background: white;
+    padding: 0;
+  }
+
+  #search-result li a {
+    display: block;
+    padding: 4px 20px;
+  }
+
+  #search-result li a:focus { background: rgba(0, 0, 0, .05); }
+
+  #search-result li::before { display: none; }
+
+  #search-result li:last-child {
+    padding: 10px 20px;
+    background: #1A1A1A;
+    box-shadow: inset 0 7px 3px -5px rgba(0, 0, 0, .1);
+    border-bottom: 0;
+    font-weight: bold;
+  }
+
+  #search-result li:last-child a { color: white; }
+</style>
+</body>
+</html>

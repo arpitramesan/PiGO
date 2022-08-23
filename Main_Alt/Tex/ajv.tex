@@ -1,0 +1,208 @@
+\documentclass[svgnames,9pt]{beamer}
+%\usepackage[latin1]{inputenc}
+\usetheme{Warsaw}
+\setbeamertemplate{headline}{}
+\setbeamerfont{footline}{size=\fontsize{6}{8}\selectfont}
+\makeatletter
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+        \insertshorttitle\hfill%
+        \insertframenumber\,/\,\inserttotalframenumber}
+\setbeamertemplate{frametitle}
+{%
+
+        \nointerlineskip%
+        \vskip-2pt%
+        \hbox{\leavevmode
+                \advance\beamer@leftmargin by -12bp%
+                \advance\beamer@rightmargin by -12bp%
+                \beamer@tempdim=\textwidth%
+                \advance\beamer@tempdim by \beamer@leftmargin%
+                \advance\beamer@tempdim by \beamer@rightmargin%
+                \hskip-\Gm@lmargin\hbox{%
+                        \setbox\beamer@tempbox=\hbox{\begin{minipage}[b]{\paperwidth}%
+                                        \vbox{}\vskip.50ex% NEW: original \vskip-.75ex
+                                        \leftskip0.3cm%
+                                        \rightskip0.3cm plus1fil\leavevmode
+                                        \insertframetitle%
+                                        \ifx\insertframesubtitle\@empty%
+                                        \strut\par%
+                                        \else
+                                        \par{\usebeamerfont*{framesubtitle}{\usebeamercolor[fg]{framesubtitle}\insertframesubtitle}\strut\par\vskip2ex}% NEW: added \vskip2ex
+                                        \fi%
+                                        \nointerlineskip
+                                        \vbox{}%
+                        \end{minipage}}%
+                        \beamer@tempdim=\ht\beamer@tempbox%
+                        \advance\beamer@tempdim by 2pt%
+                        \begin{pgfpicture}{0pt}{0pt}{\paperwidth}{\beamer@tempdim}
+                                \usebeamercolor{frametitle right}
+                                \pgfpathrectangle{\pgfpointorigin}{\pgfpoint{\paperwidth}{\beamer@tempdim}}
+                                \pgfusepath{clip}
+                                \pgftext[left,base]{\pgfuseshading{beamer@frametitleshade}}
+                        \end{pgfpicture}
+                        \hskip-\paperwidth%
+                        \box\beamer@tempbox%
+                }%
+                \hskip-\Gm@rmargin%
+        }%
+        \nointerlineskip
+        \vskip-0.2pt
+        \hbox to\textwidth{\hskip-\Gm@lmargin\pgfuseshading{beamer@topshade}\hskip-\Gm@rmargin}
+        \vskip-2pt
+}
+\makeatother
+\addtobeamertemplate{frametitle}{\vspace*{0.2cm}}{\vspace*{0.3cm}}
+
+\title[Short title]{\huge \textbf{Python coding for geospatial processing in web-based mapping applications}  } %Python coding for geospatial processing in web-based mapping applications
+\author[Group 14]{}
+
+\date{}
+
+\begin{document}
+        \begin{frame}
+
+                \begin{figure}[h!]
+                        \includegraphics[scale=0.5]{stthomaskannur.png}
+                \end{figure}
+
+                \begin{center}     
+                        \begin{minipage}[b]{1.0\textwidth}
+                                \centering
+                                Department of Computer Science and Engineering\\
+                                St. Thomas College of Engineering and Technology\\Mattannur
+                        \end{minipage}%
+                \end{center}
+
+                \titlepage
+
+                \begin{minipage}[t]{0.5\textwidth}
+                        \vspace{-3cm}
+                        \begin{flushleft}
+                                { \textit{Author}:\vspace*{0.2cm}\\STUDENT 1(STM19CS017)-ARPIT RAMESAN\\STUDENT 2(STM19CS024)-JAREESH ISMAIL CK\\STUDENT 3(STM19CS057)-VAISHNAVI RAJEEVAN }
+                                
+                                 %students name
+                        \end{flushleft}
+                \end{minipage}%
+                %
+                \begin{minipage}[t]{0.5\textwidth}
+                        \vspace{-2cm}
+                        \begin{flushright}
+                                {\textit{Supervisor}:\vspace*{0.1cm} \\ Mr.JITHIN S} %supervisor name
+                        \end{flushright}   
+                \end{minipage}%
+
+                \vspace{-0.5cm}
+                \begin{center}     
+                        \begin{minipage}[b]{0.5\textwidth}
+                                \centering 
+                                \small Academic Year \\ 2021-22\\ \today
+                        \end{minipage}%
+                \end{center}   
+        \end{frame}
+\section{OUTLINE}
+\begin{frame}{OUTLINE}
+        \tableofcontents
+\end{frame}
+\section{INTRODUCTION}
+\begin{frame}{INTRODUCTION TO DOMAIN}
+Web-based mapping applications are effective in providing
+simple and accessible interfaces for geospatial information,
+and often include large spatial databases and advanced an-
+alytical capabilities. Perhaps the most familiar is Google
+Maps [Ggl] which provides access to terabytes of maps,
+aerial imagery, street address data, and point-to-point routing
+capabilities. Descriptions are included herein of several Web-
+based applications that focus on energy and environmental data
+and how their back-end geoprocessing services were built with
+Python.
+\end{frame}
+
+\section{PROBLEM IDENTIFICATION}
+\begin{frame}
+{PROBLEM IDENTIFICATION}
+\end{frame}
+\section{LITERATURE SURVEY 1}
+\begin{frame}{LITERATURE SURVEY 1}
+
+\end{frame}
+\section{LITERATURE SURVEY 2}
+\begin{frame}{LITERATURE SURVEY 2}
+
+
+\end{frame}
+\section{EXISTING SYSTEM}
+\begin{frame}{EXISTING SYSTEM}
+
+\end{frame}
+\section{PROPOSED SYSTEM} 
+\begin{frame}{PROPOSED SYSTEM}
+
+\end{frame}
+\section{CONCLUSION}
+\begin{frame}{ CONCLUSION }     
+\begin{itemize}
+Python is the de-facto standard scripting language in both
+the open source and proprietary GIS world. Most, if not all,
+of the major GIS software systems provide Python libraries
+for system integration, analysis, and automation, including
+ArcGIS, GeoPandas [GeoP], geoDjango [geoD], GeoServer,
+GRASS, PostGIS, pySAL [pySAL], and Shapely [Shp]. Some
+of these systems, such as ArcGIS and geoDJango, provide
+frameworks for web-based mapping applications different
+from the approach we described in the SOFTWARE ENVI-
+RONMENT section. While it is outside the scope of this paper
+to discuss the merits of these other approaches, we recommend
+considering them as alternatives when planning projects.
+The examples in this paper include vector and raster data,
+as well as code for converting projections, creating buffers,
+retrieving features within a specified area, computing areas
+and lengths, computing a raster-based model, and exporting
+raster results in GeoTIFF format. All examples are written in
+Python and run within the OGC-compliant WPS framework
+provided by PyWPS.
+\item 
+\item 
+\end{itemize}
+\end{frame}
+\section{REFERENCES}
+\begin{frame}{REFERENCES}
+
+\begin{thebibliography}{99}
+            [Arg13] Argonne National Laboratory, Energy Zones Study: A Comprehen-
+sive Web-Based Mapping Tool to Identify and Analyze Clean Energy
+Zones in the Eastern Interconnection, ANL/DIS-13/09, September
+2013. Available at https://eispctools.anl.gov/document/21/file
+[Btsrp] http://getbootstrap.com
+[DOI12] U.S. Department of the Interior, Bureau of Land Management,
+and U.S. Department of Energy, Final Programmatic Environmental
+Impact Statement for Solar Energy Development in Six Southwestern
+States, FES 12-24, DOE/EIS-0403, July 2012. Available at http:
+//solareis.anl.gov/documents/fpeis
+[Erc] http://bogi.evs.anl.gov/erc/portal
+[Ezmt] http://eispctools.anl.gov
+[GDAL] http://www.gdal.org
+[geoD] http://geodjango.org
+[GeoP] http://geopandas.org
+[Ggl] http://maps.google.com
+[GRASS] http://grass.osgeo.org
+[Gsrvr] http://geoserver.org
+[NGA] http://earth-info.nga.mil/GandG/wgs84/web_mercator/index.html
+[OGP] http://www.epsg.org
+[OpLyr] http://openlayers.org
+[PGIS] http://postgis.net/docs/manual-2.0/reference.html
+[pySAL] http://pysal.readthedocs.org/en/v1.7
+[PyWPS] http://pywps.wald.intevation.org
+[RoR] http://rubyonrails.org
+[Sen] http://www.sencha.com/products/extjs
+[Shp] http://pypi.python.org/pypi/Shapely
+[Sol] http://solarmapper.anl.gov
+[Sol13] Kuiper, J., Ames, D., Koehler, D., Lee, R., and Quinby, T., "Web-
+Based Mapping Applications for Solar Energy Project Planning," in
+Proceedings of the American Solar Energy Society, Solar 2013 Con-
+ference. Available at http://proceedings.ases.org/wp-content/uploads/
+2014/02/SOLAR2013_0035_final-paper.pdf.
+[Ub] http://www.ubuntu.com
+[VM] http://www.vmware.com
+\end{thebibliography}
+\end{frame}
+\end{document}
